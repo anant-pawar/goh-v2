@@ -11,8 +11,11 @@ export default class preloadGame extends Phaser.Scene {
   }
   preload() {
     this.load.image("platform", require("../assets/platform.png"));
-    this.load.image("playButton", require("../assets/play.png"));
-     this.load.image("background", require("../assets/concrete.png"));
+    this.load.image("playButton", require("../assets/play3.png"));
+     this.load.image("background", require("../assets/storyboard.png"));
+     this.load.image("base", require("../assets/base.png"));
+     this.load.audio("theme", ['../assets/aud.ogg', '../assets/aud.mp3'])
+
     Player.load(this);
     Droplet.load(this);
 
@@ -22,7 +25,10 @@ export default class preloadGame extends Phaser.Scene {
     seed(match && match.sharedRandomSeed, { global: true });
     celerx.start();
     
-    
+
+   // var music = this.sound.add('theme');
+    //music.play();
+
     Player.init(this);
     Droplet.init(this);
 

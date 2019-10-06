@@ -14,6 +14,9 @@ export default class menu extends Phaser.Scene {
   }
 
   create() {
+   this.add.image(300,300,"base")
+
+
     const play = this.add
     .image(
       this.sys.canvas.width / 2,
@@ -21,10 +24,11 @@ export default class menu extends Phaser.Scene {
       "playButton"
     )
     .setInteractive();
-    this.add.text(10, 10, 'Score: '+ Score.get(), 
-    { fontSize: '32px', fill: '#fff', fontFamily: 'Comic Sans MS' });    
+    this.add.text(20, 20, 'Score: '+ Score.get(), 
+    { fontSize: '32px', fill: '#000', fontFamily: 'Comic Sans MS' });    
       
     celerx.submitScore(Score.get());
+    Score.reset();
     
     play.once("pointerup", this.playGame, this);
   }

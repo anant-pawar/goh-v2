@@ -10,13 +10,13 @@ const options = {
   platformSizeRange: [90, 300],
 
   // a height range between rightmost platform and next platform to be spawned
-  platformHeightRange: [-5, 5],
+  platformHeightRange: [-3, 3],
 
   // a scale to be multiplied by platformHeightRange
   platformHeighScale: 20,
 
   // platform max and min height, as screen height ratio
-  platformVerticalLimit: [0.4, 0.8],
+  platformVerticalLimit: [0.6, 0.8],
 
   // player gravity
   playerGravity: 900,

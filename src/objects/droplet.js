@@ -1,7 +1,7 @@
 export function load(game) {
   game.load.spritesheet("coin", require("../assets/water.png"), {
-    frameWidth: 64,
-    frameHeight: 64
+    frameWidth: 25,
+    frameHeight: 25
   });
 }
 

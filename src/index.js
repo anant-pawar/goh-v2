@@ -12,8 +12,8 @@ import End from "./scenes/end";
 var  gameConfig =  {
   type: Phaser.AUTO,
   parent: 'GOH',
-  width: window.innerWidth,
-  height: window.innerHeight,
+  width: 600,
+  height: 400,
   disableContextMenu: true,
   scene: [Preload, Menu, Play, End],
   backgroundColor: 0x0c88c7,
