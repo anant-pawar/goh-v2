@@ -1,7 +1,7 @@
 export function load (game) {
- game.load.spritesheet("player", require("../assets/girl.png"), {
-    frameWidth: 120,
-    frameHeight: 120
+ game.load.spritesheet("player", require("../assets/hero.png"), {
+    frameWidth: 50,
+    frameHeight: 48
   });
 }
 
@@ -10,7 +10,7 @@ export function init (game) {
       key: "run",
       frames: game.anims.generateFrameNumbers("player", {
         start: 0,
-        end: 3,
+        end: 5,
       }),
       frameRate: 15,
       repeat: -1

@@ -14,6 +14,10 @@ class scoreTracker {
     addDroplet() {
         this.score += 10;
     }
+
+    reset(){
+        this.score = 0;
+    }
 }
 
 var e = new scoreTracker();
@@ -28,4 +32,9 @@ export function get() {
 
 export function add () {
     e.addDroplet();
+}
+
+
+export function reset(){
+    e.reset();
 }

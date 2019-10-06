@@ -45,8 +45,13 @@ export default class menu extends Phaser.Scene {
   }
 
   create() {
+   this.add.image(300,300,"base")
+
     this.input.mouse.disableContextMenu();
-    
+/*
+    this.add.text(  (this.game.config.width / 2) -80,  20, 'Gattimann', 
+    { fontSize: '32px', fill: '#000', fontFamily: 'Comic Sans MS' });    
+  */  
     const play = this.add
     .image(
       this.sys.canvas.width / 2,

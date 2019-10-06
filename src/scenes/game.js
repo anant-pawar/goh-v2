@@ -13,9 +13,9 @@ export default class playGame extends Phaser.Scene {
   create() {
     // keeping track of added platforms
     this.addedPlatforms = 0;        
-   this.add.image(window.innerWidth/2,window.innerHeight/2, "background")
+   this.add.image(300,300,"background")
 
-    scoreText = this.add.text(10, 10, 'Score: 0', { fontSize: '32px', fill: '#000', fontFamily: 'Comic Sans MS' });
+    scoreText = this.add.text(20, 20, 'Score: 0', { fontSize: '32px', fill: '#000', fontFamily: 'Comic Sans MS' });
     
     // group with all active platforms.
     this.platformGroup = this.add.group({
@@ -62,7 +62,7 @@ export default class playGame extends Phaser.Scene {
     // adding the player;
     this.player = this.physics.add.sprite(
       gameOptions.playerStartPosition,
-      this.game.config.height * 0.5 ,
+      this.game.config.height * 0.7 ,
       "player"
     );
 
@@ -159,13 +159,13 @@ export default class playGame extends Phaser.Scene {
         if (this.coinPool.getLength()) {
           let coin = this.coinPool.getFirst();
           coin.x = posX;
-          coin.y = posY - 96;
+          coin.y = posY - 100;
           coin.alpha = 1;
           coin.active = true;
           coin.visible = true;
           this.coinPool.remove(coin);
         } else {
-          let coin = this.physics.add.sprite(posX, posY - 96, "coin");
+          let coin = this.physics.add.sprite(posX, posY - 100, "coin");
           coin.setImmovable(true);
           coin.setVelocityX(platform.body.velocity.x);
           coin.anims.play("rotate");
