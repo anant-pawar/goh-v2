@@ -9,6 +9,12 @@ import Test from "./scenes/test";
 import End from "./scenes/end";
 //let game;
 
+
+
+
+
+
+
 var  gameConfig =  {
   type: Phaser.AUTO,
   parent: 'GOH',

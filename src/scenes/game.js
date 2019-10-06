@@ -192,7 +192,7 @@ export default class playGame extends Phaser.Scene {
     }
   }
   update() {
-    if (Phaser.Input.Keyboard.JustDown(spaceBar)) {
+    if (Phaser.Input.Keyboard.JustDown(spaceBar) ) {
         this.jump()
     }
     // this.game over

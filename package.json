@@ -29,8 +29,9 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.0",
-    "phaser": "3.19.0",
+    "bcxjs-api": "^1.4.34",
     "p5": "^0.7.3",
+    "phaser": "3.19.0",
     "seed-random": "^2.2.0"
   }
 }

@@ -3,6 +3,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <script type="text/javascript" src="bcx.min.js"></script> -->
+    // Import JSSDK files, links and signature toolkit 
+ <script src="https://jdi.cocosbcx.net/static/js/bcx.min.js"></script>
+ <script src="https://jdi.cocosbcx.net/static/js/core.min.js"></script>
+ <script src="https://jdi.cocosbcx.net/static/js/plugin.min.js"></script>
     <title>Celer Go</title>
     <style>
         * {
@@ -24,6 +29,71 @@
           justify-content: center;
         }
       </style>
+
+      <script>
+   var _configParams = {
+      ws_node_list: [{
+        url: "ws://39.106.126.54:8049",
+        name: "COCOS3.0节点2"
+      }],
+      networks: [{
+        core_asset: "COCOS",
+        chain_id: '7d89b84f22af0b150780a2b121aa6c715b19261c8b7fe0fda3a564574ed7d3e9'
+      }],
+      // faucet_url:"http://47.93.62.96:3000",
+      faucetUrl: 'http://47.93.62.96:8041',
+      auto_reconnect: true,
+      worker: false,
+      real_sub: true,
+      check_cached_nodes_data: true,
+      // app_keys: ["5HxzZncKDjx7NEaEv989Huh7yYY7RukcJLKBDQztXAmZYCHWPgd"]
+    };
+    bcx = new BCX(_configParams);
+
+    try {
+   
+    let timer = null
+    clearInterval(timer)
+    timer = setInterval(() => {
+        if (window.BcxWeb) {
+            bcx = window.BcxWeb
+            bcx.getAccountInfo().then(res => {
+
+              console.log("getAccount-------info-----",res);
+                if (res.locked) {
+                    Message({
+                        duration: 1200,
+                        message: 'Account Locked',
+                        type: 'error',
+                    })
+                    return
+                }
+
+
+
+// Way to call contract
+bcx.callContractFunction({
+  nameOrId: "contract.gamenew", // contract
+  functionName: "getPoints", // operation
+  valueList: ['abc'], //rollUnder and coin
+  runtime: 10,
+  onlyGetFee: false
+}).then(res=>{
+
+  console.log(res);
+})
+            })
+            clearInterval(timer)
+        }
+    }, 1000)
+
+} catch (e) {
+    console.log("error----",e);
+}
+
+
+
+      </script>
 </head>
 <body>
     
