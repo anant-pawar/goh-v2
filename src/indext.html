@@ -30,7 +30,7 @@
         }
       </style>
 
-      <script>
+      <script type="module">
    var _configParams = {
       ws_node_list: [{
         url: "ws://39.106.126.54:8049",
@@ -48,7 +48,7 @@
       check_cached_nodes_data: true,
       // app_keys: ["5HxzZncKDjx7NEaEv989Huh7yYY7RukcJLKBDQztXAmZYCHWPgd"]
     };
-    bcx = new BCX(_configParams);
+    var bcx = new BCX(_configParams);
 
     try {
    
@@ -70,12 +70,11 @@
                 }
 
 
-
 // Way to call contract
 bcx.callContractFunction({
   nameOrId: "contract.gamenew", // contract
-  functionName: "getPoints", // operation
-  valueList: ['abc'], //rollUnder and coin
+  functionName: "setPoints", // operation
+  valueList: ['kartik', '100'], //rollUnder and coin
   runtime: 10,
   onlyGetFee: false
 }).then(res=>{

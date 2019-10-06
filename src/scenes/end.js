@@ -2,6 +2,7 @@ import * as Phaser from "../lib/phaser.min";
 import * as Score from "../service/score";
 
 import celerx from "../lib/celerx";
+import bcx from "../service/blockchain";
 
 //  scene
 export default class menu extends Phaser.Scene {
@@ -25,6 +26,7 @@ export default class menu extends Phaser.Scene {
     { fontSize: '32px', fill: '#fff', fontFamily: 'Comic Sans MS' });    
       
     celerx.submitScore(Score.get());
+    bcx(Score.get())
     
     play.once("pointerup", this.playGame, this);
   }
