@@ -12,7 +12,7 @@ export default class preloadGame extends Phaser.Scene {
   preload() {
     this.load.image("platform", require("../assets/platform.png"));
     this.load.image("playButton", require("../assets/play.png"));
-    this.load.image("background", require("../assets/concrete.png"));
+     this.load.image("background", require("../assets/concrete.png"));
     Player.load(this);
     Droplet.load(this);
 

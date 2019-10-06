@@ -13,7 +13,8 @@ export default class playGame extends Phaser.Scene {
   create() {
     // keeping track of added platforms
     this.addedPlatforms = 0;        
-    this.add.image(300,100, "background")
+   this.add.image(window.innerWidth/2,window.innerHeight/2, "background")
+
     scoreText = this.add.text(10, 10, 'Score: 0', { fontSize: '32px', fill: '#000', fontFamily: 'Comic Sans MS' });
     
     // group with all active platforms.
@@ -61,7 +62,7 @@ export default class playGame extends Phaser.Scene {
     // adding the player;
     this.player = this.physics.add.sprite(
       gameOptions.playerStartPosition,
-      this.game.config.height * 0.7,
+      this.game.config.height * 0.5 ,
       "player"
     );
 
