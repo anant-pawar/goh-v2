@@ -29,6 +29,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.0",
-    "p5": "^0.7.3"
+    "phaser": "3.19.0",
+    "p5": "^0.7.3",
+    "seed-random": "^2.2.0"
   }
 }
