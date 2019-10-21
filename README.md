@@ -1,12 +1,20 @@
-# BLOCKCHAIN USED:
+# PROJECT FISH NETWORKING
+A game dealing with the story of how you can meet and grow your networking, you are represented as a fish and the more places you go the more people you meet.
+  This game is a game where you need to collect water and increase the river such that your fish (*you*) can flow to different places.
+  
+  ## HTML5 and Mobile Game (currently is testing phase)
+  This game was developed using HTML5 and you can play it via your web browser or on Android using celler platform
+  
+  ### BLOCKCHAIN PRODUCTS USED:
 - Celler:
 - Cocos:
 - Matic
 - Ropsten
 
-### Learning the gaming and exploring all new blockchain platforms were more challenging
-### Cocos is an awsome platfomr but the instructions in cocos was in chinese and we had to use google lens to translate multiple sentences
-### Celler is very interesting platfomr but there is lack of documentation on integrating celerX with various gaming frameworks/engines. 
-### Ropsten was lacking and more the 3000 blocks were in queue. web3js version backward incompatibilty was causing issues
-### ethere-js has a bug which is already reported and took much time
-### Faced many issues integrating web3 latest version with Matic and had to move go-eth client. we have spend more time in integrating with Matic and transaction were not mining.
+
+## Installing
+```
+npm install
+npm start
+```
+
